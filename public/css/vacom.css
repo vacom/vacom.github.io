@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 100px;
+}
+
+a{
+    color: #000 !important;
+}
+
+/***** Navigation ***/
+.vacom-nav{
+    background: #fff;
+    border: none;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-left: 0;
+}
+
+
+
