@@ -14,49 +14,17 @@
     <link rel="stylesheet" href="css/nav.css"/>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+    <!-- ReactFire -->
+    <script src="https://cdn.firebase.com/libs/reactfire/0.5.1/reactfire.min.js"></script>
 </head>
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top vacom-nav">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">vacom</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <div class="cd-stretchy-nav">
-                    <a class="cd-nav-trigger" href="#0">
-                        <span aria-hidden="true"></span>
-                    </a>
-                    <ul>
-                        <li><a href="/" class="active"><span> Home</span></a></li>
-                        <li><a href="/about" class="lnr lnr-clock"><span>About me</span></a></li>
-                        <li><a href="/projects"><span>Portfolio</span></a></li>
-                        <li><a href="/contact"><span>Contact</span></a></li>
-                    </ul>
+    <div id="app"></div><!-- /.container -->
 
-                    <span aria-hidden="true" class="stretchy-nav-bg"></span>
-                </div>
-            </div><!--/.nav-collapse -->
-        </div>
-    </nav>
 
-    <div id="app" class="container">
-    </div><!-- /.container -->
-
-    <div class="container">
-        <div>
-            <div class="row"> <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
-                    <img data-src="holder.js/100%x180" alt="100%x180" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMzE5IiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDMxOSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTUyOGEyOWIyMmQgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxNnB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNTI4YTI5YjIyZCI+PHJlY3Qgd2lkdGg9IjMxOSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSIxMTcuOTg0Mzc1IiB5PSI5Ny4yIj4zMTl4MTgwPC90ZXh0PjwvZz48L2c+PC9zdmc+" data-holder-rendered="true" style="height: 180px; width: 100%; display: block;">
-                </a>
-            </div>
-        </div>
 
 
     <!-- Libs -->
@@ -68,6 +36,8 @@
 
     <!-- Data
     <script type="text/javascript" src="js/db.js"></script> -->
+
+
 
 </body>
 </html>

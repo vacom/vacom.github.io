@@ -52,25 +52,29 @@
 	var Router = __webpack_require__(159).Router;
 	var Route = __webpack_require__(159).Route;
 	var Link = __webpack_require__(159).Link;
+	var IndexRoute = __webpack_require__(159).IndexRoute;
 	var browserHistory = __webpack_require__(159).browserHistory;
-	//var createBrowserHistory = require('history/lib/createBrowserHistory');
 
 	//components
 	var main = __webpack_require__(217);
-	var userApp = __webpack_require__(219);
-
-	/*function requireAuth(nextState, replaceState) {
-	    if (!auth.loggedIn())
-	        replaceState({ nextPathname: nextState.location.pathname }, '/login')
-	 onEnter={requireAuth}
-	}*/
+	var about = __webpack_require__(356);
+	var introduction = __webpack_require__(221);
+	var projects = __webpack_require__(357);
+	var contact = __webpack_require__(358);
+	var error = __webpack_require__(359);
 
 	ReactDOM(React.createElement(
 	    Router,
 	    { history: browserHistory },
-	    React.createElement(Route, { path: '/', component: main }),
-	    React.createElement(Route, { path: '/login', component: userApp }),
-	    React.createElement(Route, { path: '/app', component: userApp })
+	    React.createElement(
+	        Route,
+	        { path: '/', component: main },
+	        React.createElement(IndexRoute, { component: introduction }),
+	        React.createElement(Route, { path: 'about', component: about }),
+	        React.createElement(Route, { path: 'projects', component: projects }),
+	        React.createElement(Route, { path: 'contact', component: contact }),
+	        React.createElement(Route, { path: '*', component: error })
+	    )
 	), document.getElementById("app"));
 
 /***/ },
@@ -24635,343 +24639,36 @@
 	var React = __webpack_require__(1);
 	//components
 	var Introduction = __webpack_require__(221);
+	var Nav = __webpack_require__(354);
+	var Footer = __webpack_require__(355);
 
-	var Dashboard = React.createClass({
-	    displayName: 'Dashboard',
-
+	var App = React.createClass({
+	    displayName: 'App',
 	    render: function render() {
 	        return React.createElement(
 	            'div',
 	            null,
+	            React.createElement(Nav, null),
 	            React.createElement(
-	                'div',
-	                { className: 'row' },
-	                React.createElement(Introduction, null)
+	                'section',
+	                { className: 'wrapper' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'container app' },
+	                    this.props.children
+	                ),
+	                React.createElement(Footer, null)
 	            )
 	        );
 	    }
 	});
 
-	module.exports = Dashboard;
+	module.exports = App;
 
 /***/ },
 /* 218 */,
-/* 219 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	var classNames = __webpack_require__(220);
-	//var ReactDOM = require('react-dom');
-
-	//App from the user components - show the app tools and features - main
-	var Userapp = React.createClass({
-	    displayName: 'Userapp',
-
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(Tools, null),
-	            React.createElement(
-	                'div',
-	                { className: 'costero-body-content' },
-	                React.createElement(DataTable, null)
-	            )
-	        );
-	    }
-	});
-
-	//App - Second Navbar
-	var Tools = React.createClass({
-	    displayName: 'Tools',
-
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            { className: 'navbar navbar-default navbar-fixed-top costero-second-navbar' },
-	            React.createElement(
-	                'div',
-	                { className: 'container' },
-	                React.createElement(
-	                    'div',
-	                    { className: 'navbar-header' },
-	                    React.createElement(
-	                        'button',
-	                        { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '.main-nav' },
-	                        React.createElement('span', { className: 'icon-bar' }),
-	                        React.createElement('span', { className: 'icon-bar' }),
-	                        React.createElement('span', { className: 'icon-bar' })
-	                    )
-	                ),
-	                React.createElement(
-	                    'div',
-	                    { className: 'collapse navbar-collapse main-nav' },
-	                    React.createElement(
-	                        'ul',
-	                        { className: 'nav navbar-nav' },
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { href: '/app' },
-	                                'Apps'
-	                            )
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'ul',
-	                        { className: 'nav navbar-nav navbar-right' },
-	                        React.createElement(
-	                            'li',
-	                            null,
-	                            React.createElement(
-	                                'a',
-	                                { href: '' },
-	                                'Fixed top ',
-	                                React.createElement(
-	                                    'span',
-	                                    { className: 'sr-only' },
-	                                    '(current)'
-	                                )
-	                            )
-	                        ),
-	                        React.createElement(
-	                            'li',
-	                            { className: 'dropdown' },
-	                            React.createElement(
-	                                'a',
-	                                { href: '#', className: 'dropdown-toggle', 'data-toggle': 'dropdown', role: 'button', 'aria-haspopup': 'true', 'aria-expanded': 'false' },
-	                                'Vitor Amaral ',
-	                                React.createElement('span', { className: 'caret' })
-	                            ),
-	                            React.createElement(
-	                                'ul',
-	                                { className: 'dropdown-menu' },
-	                                React.createElement(
-	                                    'li',
-	                                    null,
-	                                    React.createElement(
-	                                        'a',
-	                                        { href: '' },
-	                                        'Action'
-	                                    )
-	                                ),
-	                                React.createElement(
-	                                    'li',
-	                                    null,
-	                                    React.createElement(
-	                                        'a',
-	                                        { href: '' },
-	                                        'Another action'
-	                                    )
-	                                ),
-	                                React.createElement(
-	                                    'li',
-	                                    null,
-	                                    React.createElement(
-	                                        'a',
-	                                        { href: '' },
-	                                        'Something else here'
-	                                    )
-	                                ),
-	                                React.createElement('li', { role: 'separator', className: 'divider' }),
-	                                React.createElement(
-	                                    'li',
-	                                    { className: 'dropdown-header' },
-	                                    'Nav header'
-	                                ),
-	                                React.createElement(
-	                                    'li',
-	                                    null,
-	                                    React.createElement(
-	                                        'a',
-	                                        { href: '' },
-	                                        'Separated link'
-	                                    )
-	                                ),
-	                                React.createElement(
-	                                    'li',
-	                                    null,
-	                                    React.createElement(
-	                                        'a',
-	                                        { href: '' },
-	                                        'One more separated link'
-	                                    )
-	                                )
-	                            )
-	                        )
-	                    )
-	                )
-	            )
-	        );
-	    }
-	});
-
-	var DataTable = React.createClass({
-	    displayName: 'DataTable',
-
-	    loadData: function loadData() {
-	        $.ajax({
-	            url: "http://jsonplaceholder.typicode.com/posts?userId=1",
-	            method: 'GET',
-	            dataType: 'json',
-	            success: function (data) {
-	                // data = this.state.data.concat([data]);
-	                this.setState({ data: data });
-	            }.bind(this),
-	            error: function (xhr, status, err) {
-	                console.error(this.props.url, status, err.toString());
-	            }.bind(this)
-	        });
-	    },
-	    getInitialState: function getInitialState() {
-	        return { data: [] };
-	    },
-	    componentDidMount: function componentDidMount() {
-	        this.loadData();
-	    },
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            { className: 'row' },
-	            React.createElement(
-	                'div',
-	                { className: 'col-md-12' },
-	                React.createElement(
-	                    'table',
-	                    { className: 'table table-striped' },
-	                    React.createElement(
-	                        'thead',
-	                        null,
-	                        React.createElement(
-	                            'tr',
-	                            null,
-	                            React.createElement(
-	                                'th',
-	                                null,
-	                                '#'
-	                            ),
-	                            React.createElement(
-	                                'th',
-	                                null,
-	                                'ID'
-	                            ),
-	                            React.createElement(
-	                                'th',
-	                                null,
-	                                'Title'
-	                            ),
-	                            React.createElement(
-	                                'th',
-	                                null,
-	                                'Body'
-	                            )
-	                        )
-	                    ),
-	                    React.createElement(
-	                        'tbody',
-	                        null,
-	                        this.state.data.map(function (result) {
-	                            return React.createElement(TableItemWrapper, { key: result.id, data: result });
-	                        })
-	                    )
-	                )
-	            )
-	        );
-	    }
-	});
-
-	var TableItemWrapper = React.createClass({
-	    displayName: 'TableItemWrapper',
-
-	    render: function render() {
-	        return React.createElement(
-	            'tr',
-	            null,
-	            React.createElement(
-	                'td',
-	                null,
-	                this.props.data.id
-	            ),
-	            React.createElement(
-	                'td',
-	                null,
-	                this.props.data.userId
-	            ),
-	            React.createElement(
-	                'td',
-	                null,
-	                this.props.data.title
-	            ),
-	            React.createElement(
-	                'td',
-	                null,
-	                this.props.data.body
-	            )
-	        );
-	    }
-	});
-
-	module.exports = Userapp;
-
-/***/ },
-/* 220 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2016 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-
-	(function () {
-		'use strict';
-
-		var hasOwn = {}.hasOwnProperty;
-
-		function classNames () {
-			var classes = [];
-
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-
-				var argType = typeof arg;
-
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
-
-			return classes.join(' ');
-		}
-
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if (true) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	}());
-
-
-/***/ },
+/* 219 */,
+/* 220 */,
 /* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -24986,10 +24683,49 @@
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            { className: 'row' },
+	            { className: 'section' },
 	            React.createElement(
 	                'div',
-	                { className: 'col-md-6 animated fadeInUp' },
+	                { className: 'row' },
+	                React.createElement(Header, null)
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(Featured, null)
+	            )
+	        );
+	    }
+	});
+
+	var Header = React.createClass({
+	    displayName: 'Header',
+
+	    mixins: [ReactFireMixin],
+	    componentWillMount: function componentWillMount() {
+	        var ref = new Firebase("https://vacom.firebaseio.com/items");
+	        this.bindAsObject(ref, "items");
+	    },
+	    componentWillUnmount: function componentWillUnmount() {
+	        this.firebaseRef.off();
+	    },
+	    getInitialState: function getInitialState() {
+	        return { data: [] };
+	    },
+	    render: function render() {
+
+	        console.log(this.state.items);
+	        console.log(JSON.stringify(this.state.items));
+
+	        var teste = JSON.stringify(this.state.items);
+	        console.log(teste);
+
+	        return React.createElement(
+	            'div',
+	            { className: 'col-md-12' },
+	            React.createElement(
+	                'div',
+	                { className: 'introduction' },
 	                React.createElement(
 	                    'h1',
 	                    null,
@@ -25005,7 +24741,453 @@
 	    }
 	});
 
+	var Featured = React.createClass({
+	    displayName: 'Featured',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'div',
+	                { className: 'col-xs-6 col-md-3' },
+	                React.createElement(
+	                    'a',
+	                    { href: '#', className: 'thumbnail' },
+	                    React.createElement('img', { src: 'http://xn--28jud8bn.com/wp-content/uploads/2015/09/social_media_apps-319x180.jpg' })
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'col-xs-6 col-md-3' },
+	                React.createElement(
+	                    'a',
+	                    { href: '#', className: 'thumbnail' },
+	                    React.createElement('img', { src: 'http://xn--28jud8bn.com/wp-content/uploads/2015/09/social_media_apps-319x180.jpg' })
+	                )
+	            )
+	        );
+	    }
+	});
+
 	module.exports = Introduction;
+
+/***/ },
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */,
+/* 270 */,
+/* 271 */,
+/* 272 */,
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */,
+/* 277 */,
+/* 278 */,
+/* 279 */,
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(158);
+	var Link = __webpack_require__(159).Link;
+
+	var Nav = React.createClass({
+	    displayName: 'Nav',
+
+	    render: function render() {
+	        return React.createElement(
+	            'nav',
+	            { className: 'navbar navbar-inverse navbar-fixed-top vacom-nav' },
+	            React.createElement(
+	                'div',
+	                { className: 'container' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'navbar-header' },
+	                    React.createElement(
+	                        'button',
+	                        { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#navbar', 'aria-expanded': 'false', 'aria-controls': 'navbar' },
+	                        React.createElement(
+	                            'span',
+	                            { className: 'sr-only' },
+	                            'Toggle navigation'
+	                        ),
+	                        React.createElement('span', { className: 'icon-bar' }),
+	                        React.createElement('span', { className: 'icon-bar' }),
+	                        React.createElement('span', { className: 'icon-bar' })
+	                    ),
+	                    React.createElement(
+	                        'a',
+	                        { className: 'navbar-brand', href: '/' },
+	                        'vacom'
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { id: 'navbar', className: 'collapse navbar-collapse' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'cd-stretchy-nav' },
+	                        React.createElement(
+	                            'a',
+	                            { className: 'cd-nav-trigger', href: '#0' },
+	                            React.createElement('span', { 'aria-hidden': 'true' })
+	                        ),
+	                        React.createElement(
+	                            'ul',
+	                            null,
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: '/', className: 'active' },
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        'Home'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: '/about' },
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        'About'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: '/projects' },
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        'Portfolio'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: '/contact' },
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        'Contact'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: '/outro' },
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        'Outro'
+	                                    )
+	                                )
+	                            )
+	                        ),
+	                        React.createElement('span', { 'aria-hidden': 'true', className: 'stretchy-nav-bg' })
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Nav;
+
+/***/ },
+/* 355 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var ReactDOM = __webpack_require__(158);
+	var Link = __webpack_require__(159).Link;
+
+	var Footer = React.createClass({
+	    displayName: 'Footer',
+
+	    render: function render() {
+	        return React.createElement(
+	            'footer',
+	            null,
+	            React.createElement(
+	                'ul',
+	                null,
+	                React.createElement(
+	                    'li',
+	                    null,
+	                    React.createElement(
+	                        Link,
+	                        { to: '' },
+	                        React.createElement('span', { className: 'lnr lnr-checkmark-circle' })
+	                    )
+	                ),
+	                React.createElement(
+	                    'li',
+	                    null,
+	                    React.createElement(
+	                        Link,
+	                        { to: '' },
+	                        React.createElement('span', { className: 'lnr lnr-layers' })
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'p',
+	                null,
+	                '© Copyright 2016 vacom.me. All Rights Reserved.'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Footer;
+
+/***/ },
+/* 356 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	//components
+
+	var About = React.createClass({
+	    displayName: 'About',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h1',
+	                null,
+	                'About me'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 357 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	//components
+
+	var About = React.createClass({
+	    displayName: 'About',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h1',
+	                null,
+	                'Projects'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 358 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	//components
+
+	var About = React.createClass({
+	    displayName: 'About',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h1',
+	                null,
+	                'Contact'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 359 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	//components
+
+	var About = React.createClass({
+	    displayName: 'About',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h1',
+	                null,
+	                'Pagina nao encontrada'
+	            )
+	        );
+	    }
+	});
+
+	module.exports = About;
 
 /***/ }
 /******/ ]);

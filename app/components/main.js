@@ -1,19 +1,27 @@
 var React = require('react');
 //components
 var Introduction = require('./introduction');
+var Nav = require('./navigation');
+var Footer = require('./Footer');
 
-
-var Dashboard = React.createClass({
-    render: function() {
+var App = React.createClass({
+    render() {
         return (
             <div>
-                <div className={'row'}>
-                    <Introduction></Introduction>
-                </div>
+                <Nav></Nav>
+
+                <section className={'wrapper'}>
+                    <div className={'container app'}>
+                        {this.props.children}
+                    </div>
+
+                    <Footer></Footer>
+                </section>
+
             </div>
-        );
+        )
     }
 });
 
 
-module.exports = Dashboard;
+module.exports = App;

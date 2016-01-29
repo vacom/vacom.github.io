@@ -5,16 +5,25 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 a{
     color: #000 !important;
 }
 
+section.wrapper{
+    min-height:100%;
+    position:relative;
+}
+
+.app{
+    padding-bottom: 180px;
+}
+
 /***** Navigation ***/
 .vacom-nav{
-    background: #fff;
+    background: transparent;
     border: none;
 }
 
@@ -22,7 +31,57 @@ a{
     font-weight: bold;
     font-size: 30px;
     padding-top: 25px;
-    padding-left: 0;
+
+}
+
+/***** introduction ***/
+.introduction{
+    width: 355px;
+}
+
+.introduction h1{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.introduction p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+/*Projects*/
+
+.project-thumb{
+    height: 180px;
+    width: 319px;
+    display: block;
+}
+
+
+footer{
+    text-align: center;
+    background: #f1f1f1;
+    height: 150px;
+    padding-top: 35px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+
+footer ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+footer ul li a{
+    font-size: 25px;
+    text-decoration: none !important;
+    margin-left: 10px !important;
+}
+
+footer ul li a:first-child{
+    margin-left: 0;
 }
 
 
