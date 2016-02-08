@@ -57,11 +57,12 @@
 
 	//components
 	var main = __webpack_require__(217);
-	var about = __webpack_require__(356);
-	var introduction = __webpack_require__(221);
-	var projects = __webpack_require__(357);
-	var contact = __webpack_require__(358);
-	var error = __webpack_require__(359);
+	var about = __webpack_require__(221);
+	var introduction = __webpack_require__(218);
+	var projects = __webpack_require__(222);
+	var viewer = __webpack_require__(223);
+	var contact = __webpack_require__(224);
+	var error = __webpack_require__(225);
 
 	ReactDOM(React.createElement(
 	    Router,
@@ -72,6 +73,7 @@
 	        React.createElement(IndexRoute, { component: introduction }),
 	        React.createElement(Route, { path: 'about', component: about }),
 	        React.createElement(Route, { path: 'projects', component: projects }),
+	        React.createElement(Route, { path: 'viewer', component: viewer }),
 	        React.createElement(Route, { path: 'contact', component: contact }),
 	        React.createElement(Route, { path: '*', component: error })
 	    )
@@ -24638,9 +24640,9 @@
 
 	var React = __webpack_require__(1);
 	//components
-	var Introduction = __webpack_require__(221);
-	var Nav = __webpack_require__(354);
-	var Footer = __webpack_require__(355);
+	var Introduction = __webpack_require__(218);
+	var Nav = __webpack_require__(219);
+	var Footer = __webpack_require__(220);
 
 	var App = React.createClass({
 	    displayName: 'App',
@@ -24666,10 +24668,7 @@
 	module.exports = App;
 
 /***/ },
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24701,25 +24700,7 @@
 	var Header = React.createClass({
 	    displayName: 'Header',
 
-	    mixins: [ReactFireMixin],
-	    componentWillMount: function componentWillMount() {
-	        var ref = new Firebase("https://vacom.firebaseio.com/items");
-	        this.bindAsObject(ref, "items");
-	    },
-	    componentWillUnmount: function componentWillUnmount() {
-	        this.firebaseRef.off();
-	    },
-	    getInitialState: function getInitialState() {
-	        return { data: [] };
-	    },
 	    render: function render() {
-
-	        console.log(this.state.items);
-	        console.log(JSON.stringify(this.state.items));
-
-	        var teste = JSON.stringify(this.state.items);
-	        console.log(teste);
-
 	        return React.createElement(
 	            'div',
 	            { className: 'col-md-12' },
@@ -24729,12 +24710,12 @@
 	                React.createElement(
 	                    'h1',
 	                    null,
-	                    'My creative and simplicity modern projects'
+	                    'Creativity Is Intelligence Having Fun.'
 	                ),
 	                React.createElement(
 	                    'p',
 	                    null,
-	                    'Please check my portfolio. All project is clean and simplicity modern style. You can download this template.'
+	                    'Please check my portfolio. My creative and simplicity modern projects.'
 	                )
 	            )
 	        );
@@ -24754,16 +24735,7 @@
 	                React.createElement(
 	                    'a',
 	                    { href: '#', className: 'thumbnail' },
-	                    React.createElement('img', { src: 'http://xn--28jud8bn.com/wp-content/uploads/2015/09/social_media_apps-319x180.jpg' })
-	                )
-	            ),
-	            React.createElement(
-	                'div',
-	                { className: 'col-xs-6 col-md-3' },
-	                React.createElement(
-	                    'a',
-	                    { href: '#', className: 'thumbnail' },
-	                    React.createElement('img', { src: 'http://xn--28jud8bn.com/wp-content/uploads/2015/09/social_media_apps-319x180.jpg' })
+	                    React.createElement('img', { src: 'img/projects/sinote/sinote_thumb.jpg' })
 	                )
 	            )
 	        );
@@ -24773,139 +24745,7 @@
 	module.exports = Introduction;
 
 /***/ },
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */,
-/* 268 */,
-/* 269 */,
-/* 270 */,
-/* 271 */,
-/* 272 */,
-/* 273 */,
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */,
-/* 326 */,
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */,
-/* 334 */,
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */,
-/* 343 */,
-/* 344 */,
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */,
-/* 350 */,
-/* 351 */,
-/* 352 */,
-/* 353 */,
-/* 354 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25036,7 +24876,7 @@
 	module.exports = Nav;
 
 /***/ },
-/* 355 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25060,8 +24900,8 @@
 	                    null,
 	                    React.createElement(
 	                        Link,
-	                        { to: '' },
-	                        React.createElement('span', { className: 'lnr lnr-checkmark-circle' })
+	                        { to: 'https://www.facebook.com/vacom.web/', target: '_blank' },
+	                        React.createElement('span', { className: 'fa fa-facebook' })
 	                    )
 	                ),
 	                React.createElement(
@@ -25069,8 +24909,8 @@
 	                    null,
 	                    React.createElement(
 	                        Link,
-	                        { to: '' },
-	                        React.createElement('span', { className: 'lnr lnr-layers' })
+	                        { to: 'https://twitter.com/VitorAmaral_Dev', target: '_blank' },
+	                        React.createElement('span', { className: 'fa fa-twitter' })
 	                    )
 	                )
 	            ),
@@ -25086,7 +24926,248 @@
 	module.exports = Footer;
 
 /***/ },
-/* 356 */
+/* 221 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Link = __webpack_require__(159).Link;
+	//components
+
+	var About = React.createClass({
+	    displayName: 'About',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-6' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'introduction' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'About Me'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Full stack developer'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Hello, my name is Vitor Amaral. I\'m a Full Stack Developer. I invite you to look at my  ',
+	                            React.createElement(
+	                                Link,
+	                                { to: '/projects' },
+	                                React.createElement(
+	                                    'span',
+	                                    null,
+	                                    'work'
+	                                )
+	                            ),
+	                            '.'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Knowledge Management and Programming, I do my work a fun place mixed with essential ingredients: imagination, creativity and design.'
+	                        )
+	                    )
+	                ),
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-6' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'introduction' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'Awards'
+	                        ),
+	                        React.createElement(
+	                            'ul',
+	                            null,
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Quadro de Excelência em Escola Profissional da Povoação'
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Prémio BES Açores'
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Honours Certificate: Third Quarter 2007'
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Honours Certificate: Third Quarter 2006'
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Business Studies 2007'
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Drama 2007'
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                'Certificado Azores Skills'
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = About;
+
+/***/ },
+/* 222 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Link = __webpack_require__(159).Link;
+	//components
+
+	var Projects = React.createClass({
+	    displayName: 'Projects',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-6' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'introduction' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'Projects'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Please check my work.'
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-12' },
+	                    React.createElement(Works, null)
+	                )
+	            )
+	        );
+	    }
+	});
+
+	var WorksStyle = {
+	    paddingLeft: 0
+	};
+
+	var Works = React.createClass({
+	    displayName: 'Works',
+
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'div',
+	                { className: 'col-xs-6 col-md-3', style: WorksStyle },
+	                React.createElement(
+	                    Link,
+	                    { to: '/viewer', className: 'thumbnail' },
+	                    React.createElement('img', { src: 'img/projects/sinote/sinote_thumb.jpg' })
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Projects;
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Link = __webpack_require__(159).Link;
+	//components
+
+	var Viewer = React.createClass({
+	    displayName: 'Viewer',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-6' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'introduction' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'Viewer'
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-12' },
+	                    React.createElement(Works, null)
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Viewer;
+
+/***/ },
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25101,9 +25182,26 @@
 	            'div',
 	            null,
 	            React.createElement(
-	                'h1',
-	                null,
-	                'About me'
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-6' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'introduction' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'Contact'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'To contact me please use the following e-mail: vitor.works@gmail.com'
+	                        )
+	                    )
+	                )
 	            )
 	        );
 	    }
@@ -25112,59 +25210,7 @@
 	module.exports = About;
 
 /***/ },
-/* 357 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	//components
-
-	var About = React.createClass({
-	    displayName: 'About',
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(
-	                'h1',
-	                null,
-	                'Projects'
-	            )
-	        );
-	    }
-	});
-
-	module.exports = About;
-
-/***/ },
-/* 358 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-	//components
-
-	var About = React.createClass({
-	    displayName: 'About',
-	    render: function render() {
-	        return React.createElement(
-	            'div',
-	            null,
-	            React.createElement(
-	                'h1',
-	                null,
-	                'Contact'
-	            )
-	        );
-	    }
-	});
-
-	module.exports = About;
-
-/***/ },
-/* 359 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

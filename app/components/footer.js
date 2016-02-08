@@ -9,8 +9,8 @@ var Footer = React.createClass({
         return (
             <footer>
                 <ul>
-                    <li><Link to=""><span className={'lnr lnr-checkmark-circle'}></span></Link></li>
-                    <li><Link to=""><span className={'lnr lnr-layers'}></span></Link></li>
+                    <li><Link to="https://www.facebook.com/vacom.web/" target="_blank"><span className={'fa fa-facebook'}></span></Link></li>
+                    <li><Link to="https://twitter.com/VitorAmaral_Dev" target="_blank"><span className={'fa fa-twitter'}></span></Link></li>
                 </ul>
                 <p>© Copyright 2016 vacom.me. All Rights Reserved.</p>
             </footer>

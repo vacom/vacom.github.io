@@ -13,6 +13,7 @@ var main = require('./components/main');
 var about = require('./components/about');
 var introduction = require('./components/introduction');
 var projects = require('./components/projects');
+var viewer = require('./components/viewer');
 var contact = require('./components/contact');
 var error = require('./components/error');
 
@@ -24,6 +25,7 @@ ReactDOM((
             <IndexRoute component={introduction} />
             <Route path="about" component={about}/>
             <Route path="projects" component={projects}/>
+            <Route path="viewer" component={viewer}/>
             <Route path="contact" component={contact}/>
             <Route path="*" component={error}/>
         </Route>

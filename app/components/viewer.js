@@ -1,16 +1,21 @@
 var React = require('react');
+var Link = require('react-router').Link;
 //components
 
-var About = React.createClass({
+var Viewer = React.createClass({
     render() {
         return (
             <div>
                 <div className={'row'}>
                     <div className={'col-md-6'}>
                         <div className={'introduction'}>
-                            <h1>Contact</h1>
-                            <p>To contact me please use the following e-mail: vitor.works@gmail.com</p>
+                            <h1>Viewer</h1>
                         </div>
+                    </div>
+                </div>
+                <div className={'row'}>
+                    <div className={'col-md-12'}>
+                        <Works></Works>
                     </div>
                 </div>
             </div>
@@ -19,4 +24,6 @@ var About = React.createClass({
 });
 
 
-module.exports = About;
+
+
+module.exports = Viewer;

@@ -44,9 +44,13 @@ section.wrapper{
     font-weight: bold;
 }
 
-.introduction p{
+.introduction p, .introduction ul li{
     font-size: 15px;
     font-weight: 300;
+}
+
+.introduction ul li{
+    padding-top: 5px;
 }
 
 /*Projects*/
