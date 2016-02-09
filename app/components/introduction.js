@@ -1,7 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-
-
+var Link = require('react-router').Link;
 
 var Introduction = React.createClass({
     render: function() {
@@ -36,9 +35,9 @@ var Featured = React.createClass({
         return (
            <div>
                 <div className={'col-xs-6 col-md-3'}>
-                    <a href="#" className={'thumbnail'}>
+                    <Link to="/viewer" className={'thumbnail'}>
                         <img src="img/projects/sinote/sinote_thumb.jpg"/>
-                    </a>
+                    </Link>
                 </div>
            </div>
         );

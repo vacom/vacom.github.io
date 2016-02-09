@@ -24675,6 +24675,7 @@
 
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(158);
+	var Link = __webpack_require__(159).Link;
 
 	var Introduction = React.createClass({
 	    displayName: 'Introduction',
@@ -24733,8 +24734,8 @@
 	                'div',
 	                { className: 'col-xs-6 col-md-3' },
 	                React.createElement(
-	                    'a',
-	                    { href: '#', className: 'thumbnail' },
+	                    Link,
+	                    { to: '/viewer', className: 'thumbnail' },
 	                    React.createElement('img', { src: 'img/projects/sinote/sinote_thumb.jpg' })
 	                )
 	            )
@@ -24768,18 +24769,6 @@
 	                    'div',
 	                    { className: 'navbar-header' },
 	                    React.createElement(
-	                        'button',
-	                        { type: 'button', className: 'navbar-toggle collapsed', 'data-toggle': 'collapse', 'data-target': '#navbar', 'aria-expanded': 'false', 'aria-controls': 'navbar' },
-	                        React.createElement(
-	                            'span',
-	                            { className: 'sr-only' },
-	                            'Toggle navigation'
-	                        ),
-	                        React.createElement('span', { className: 'icon-bar' }),
-	                        React.createElement('span', { className: 'icon-bar' }),
-	                        React.createElement('span', { className: 'icon-bar' })
-	                    ),
-	                    React.createElement(
 	                        'a',
 	                        { className: 'navbar-brand', href: '/' },
 	                        'vacom'
@@ -24804,24 +24793,11 @@
 	                                null,
 	                                React.createElement(
 	                                    Link,
-	                                    { to: '/', className: 'active' },
+	                                    { to: '/' },
 	                                    React.createElement(
 	                                        'span',
 	                                        null,
 	                                        'Home'
-	                                    )
-	                                )
-	                            ),
-	                            React.createElement(
-	                                'li',
-	                                null,
-	                                React.createElement(
-	                                    Link,
-	                                    { to: '/about' },
-	                                    React.createElement(
-	                                        'span',
-	                                        null,
-	                                        'About'
 	                                    )
 	                                )
 	                            ),
@@ -24843,11 +24819,11 @@
 	                                null,
 	                                React.createElement(
 	                                    Link,
-	                                    { to: '/contact' },
+	                                    { to: '/about' },
 	                                    React.createElement(
 	                                        'span',
 	                                        null,
-	                                        'Contact'
+	                                        'About'
 	                                    )
 	                                )
 	                            ),
@@ -24856,11 +24832,24 @@
 	                                null,
 	                                React.createElement(
 	                                    Link,
-	                                    { to: '/outro' },
+	                                    { to: '/store' },
 	                                    React.createElement(
 	                                        'span',
 	                                        null,
-	                                        'Outro'
+	                                        'Coming Soon'
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement(
+	                                    Link,
+	                                    { to: '/contact' },
+	                                    React.createElement(
+	                                        'span',
+	                                        null,
+	                                        'Contact'
 	                                    )
 	                                )
 	                            )
@@ -25139,14 +25128,24 @@
 	                { className: 'row' },
 	                React.createElement(
 	                    'div',
-	                    { className: 'col-md-6' },
+	                    { className: 'col-md-6 col-xs-12' },
 	                    React.createElement(
 	                        'div',
 	                        { className: 'introduction' },
 	                        React.createElement(
 	                            'h1',
 	                            null,
-	                            'Viewer'
+	                            'Sinote'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Website, Web App'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Sinote is a note-taking service, which allows you to create and access the notes. It consists of the site and application. Site is the "image" of the brand and its informative features. The application allows account creation and store notes in the cloud and sync.'
 	                        )
 	                    )
 	                )
@@ -25157,8 +25156,26 @@
 	                React.createElement(
 	                    'div',
 	                    { className: 'col-md-12' },
-	                    React.createElement(Works, null)
+	                    React.createElement(ViewerContent, null)
 	                )
+	            )
+	        );
+	    }
+	});
+
+	var ViewerContent = React.createClass({
+	    displayName: 'ViewerContent',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'div',
+	                { className: 'project-content' },
+	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c1.png', alt: '' }),
+	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c2.png', alt: '' }),
+	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c3.png', alt: '' }),
+	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c4.png', alt: '' })
 	            )
 	        );
 	    }

@@ -61,6 +61,15 @@ section.wrapper{
     display: block;
 }
 
+.project-content{
+    margin: 0 auto;
+}
+
+.project-content .project-img{
+    width: 1140px;
+    height: 650px;
+    margin-top: 35px;
+}
 
 footer{
     text-align: center;
@@ -86,6 +95,19 @@ footer ul li a{
 
 footer ul li a:first-child{
     margin-left: 0;
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .project-content .project-img{
+        height: 250px;
+    }
+    .navbar-collapse.collapse
+    {
+        display: inline !important;
+        border: none !important;
+    }
 }
 
 
