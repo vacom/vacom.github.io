@@ -8,7 +8,7 @@ var About = React.createClass({
             <div>
                 <div className={'row'}>
                     <div className={'col-md-6'}>
-                        <div className={'introduction'}>
+                        <div className={'introduction animated fadeInUp'}>
                             <h1>About Me</h1>
                             <p>Full stack developer</p>
                             <p>Hello, my name is Vitor Amaral. I'm a Full Stack Developer. I invite you to look at my  <Link to="/projects"><span>work</span></Link>.</p>
@@ -16,7 +16,7 @@ var About = React.createClass({
                         </div>
                     </div>
                     <div className={'col-md-6'}>
-                        <div className={'introduction'}>
+                        <div className={'introduction animated fadeInUp'}>
                             <h1>Awards</h1>
                             <ul>
                                 <li>Quadro de Excelência em Escola Profissional da Povoação</li>

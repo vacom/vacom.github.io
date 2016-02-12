@@ -7,7 +7,7 @@ var Projects = React.createClass({
         return (
             <div>
                 <div className={'row'}>
-                    <div className={'col-md-6'}>
+                    <div className={'col-md-6 '}>
                         <div className={'introduction'}>
                             <h1>Projects</h1>
                             <p>Please check my work.</p>
@@ -29,14 +29,36 @@ var WorksStyle = {
 };
 
 var Works = React.createClass({
+    getInitialState: function (){
+        return{
+            data: []
+        }
+    },
+    componentWillMount: function(){
+        this.firebaseRef = new Firebase('https://vacom.firebaseio.com/projects');
+        var that = this;
+        this.firebaseRef.once("value", function(snapshot){
+            var getData = [];
+            snapshot.forEach(function(data){
+                var newData = {
+                    id: data.val().id,
+                    imgsrc: data.val().imgsrc
+                }
+                getData.push(newData);
+                that.setState({data: getData});
+            });
+        });
+    },
     render: function() {
         return (
             <div>
-                <div className={'col-xs-6 col-md-3'} style={WorksStyle}>
-                    <Link to="/viewer" className={'thumbnail'}>
-                        <img src="img/projects/sinote/sinote_thumb.jpg"/>
-                    </Link>
-                </div>
+                {this.state.data.map(function(object, i){
+                    return <div className={'col-xs-6 col-md-3 animated fadeInUp'} style={WorksStyle}>
+                        <Link to="/viewer" params={{ projectID: object.id}}  className={'thumbnail'}>
+                            <img src={object.imgsrc}/>
+                        </Link>
+                    </div>
+                })}
             </div>
         );
     }

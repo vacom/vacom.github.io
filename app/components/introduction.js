@@ -5,7 +5,7 @@ var Link = require('react-router').Link;
 var Introduction = React.createClass({
     render: function() {
         return (
-            <div className={'section'}>
+            <div className={'section  animated fadeInUp'}>
                 <div className={'row'}>
                     <Header></Header>
                 </div>
@@ -31,14 +31,36 @@ var Header = React.createClass({
 });
 
 var Featured = React.createClass({
+    getInitialState: function (){
+        return{
+            data: []
+        }
+    },
+    componentWillMount: function(){
+        this.firebaseRef = new Firebase('https://vacom.firebaseio.com/home');
+        var that = this;
+        this.firebaseRef.once("value", function(snapshot){
+            var getData = [];
+            snapshot.forEach(function(data){
+               var newData = {
+                   id: data.val().id,
+                   imgsrc: data.val().imgsrc
+               }
+                getData.push(newData);
+                that.setState({data: getData});
+            });
+        });
+    },
     render: function() {
         return (
            <div>
-                <div className={'col-xs-6 col-md-3'}>
-                    <Link to="/viewer" className={'thumbnail'}>
-                        <img src="img/projects/sinote/sinote_thumb.jpg"/>
-                    </Link>
-                </div>
+                    {this.state.data.map(function(object, i){
+                        return <div className={'col-xs-6 col-md-3 animated fadeInUp'}>
+                               <Link to="/viewer" params={{ projectID: object.id}}  className={'thumbnail'}>
+                                   <img src={object.imgsrc}/>
+                               </Link>
+                        </div>
+                    })}
            </div>
         );
     }
