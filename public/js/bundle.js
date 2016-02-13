@@ -24950,7 +24950,7 @@
 	                    { className: 'col-xs-6 col-md-3 animated fadeInUp' },
 	                    React.createElement(
 	                        Link,
-	                        { to: '/viewer', params: { projectID: object.id }, className: 'thumbnail' },
+	                        { to: '/viewer', params: { projectID: object.id }, className: 'thumbnail project-thumb project' },
 	                        React.createElement('img', { src: object.imgsrc })
 	                    )
 	                );
@@ -25334,7 +25334,7 @@
 	                    { className: 'col-xs-6 col-md-3 animated fadeInUp', style: WorksStyle },
 	                    React.createElement(
 	                        Link,
-	                        { to: '/viewer', params: { projectID: object.id }, className: 'thumbnail' },
+	                        { to: '/viewer', params: { projectID: object.id }, className: 'thumbnail project-thumb project project_' + object.id },
 	                        React.createElement('img', { src: object.imgsrc })
 	                    )
 	                );
@@ -25357,6 +25357,29 @@
 
 	var Viewer = React.createClass({
 	    displayName: 'Viewer',
+
+	    getInitialState: function getInitialState() {
+	        return {
+	            data: []
+	        };
+	    },
+	    componentWillMount: function componentWillMount() {
+	        this.firebaseRef = new Firebase('https://vacom.firebaseio.com/viewer');
+	        var that = this;
+	        this.firebaseRef.once("value", function (snapshot) {
+	            var getData = [];
+	            snapshot.forEach(function (data) {
+	                var newData = {
+	                    id: data.val().id,
+	                    title: data.val().title,
+	                    description: data.val().description,
+	                    tags: data.val().tags
+	                };
+	                getData.push(newData);
+	                that.setState({ data: getData });
+	            });
+	        });
+	    },
 	    render: function render() {
 	        return React.createElement(
 	            'div',
@@ -25367,25 +25390,29 @@
 	                React.createElement(
 	                    'div',
 	                    { className: 'col-md-6 col-xs-12' },
-	                    React.createElement(
-	                        'div',
-	                        { className: 'introduction animated fadeInUp' },
-	                        React.createElement(
-	                            'h1',
-	                            null,
-	                            'Sinote'
-	                        ),
-	                        React.createElement(
-	                            'p',
-	                            null,
-	                            'Website, Web App'
-	                        ),
-	                        React.createElement(
-	                            'p',
-	                            null,
-	                            'Sinote is a note-taking service, which allows you to create and access the notes. It consists of the site and application. Site is the "image" of the brand and its informative features. The application allows account creation and store notes in the cloud and sync.'
-	                        )
-	                    )
+	                    this.state.data.map(function (object, i) {
+	                        if (object.id == 1) {
+	                            return React.createElement(
+	                                'div',
+	                                { className: 'introduction animated fadeInUp' },
+	                                React.createElement(
+	                                    'h1',
+	                                    null,
+	                                    object.title
+	                                ),
+	                                React.createElement(
+	                                    'p',
+	                                    null,
+	                                    object.tags
+	                                ),
+	                                React.createElement(
+	                                    'p',
+	                                    null,
+	                                    object.description
+	                                )
+	                            );
+	                        }
+	                    })
 	                )
 	            ),
 	            React.createElement(
@@ -25403,6 +25430,27 @@
 
 	var ViewerContent = React.createClass({
 	    displayName: 'ViewerContent',
+
+	    getInitialState: function getInitialState() {
+	        return {
+	            data: []
+	        };
+	    },
+	    componentWillMount: function componentWillMount() {
+	        this.firebaseRef = new Firebase('https://vacom.firebaseio.com/viewer');
+	        var that = this;
+	        this.firebaseRef.once("value", function (snapshot) {
+	            var getData = [];
+	            snapshot.forEach(function (data) {
+	                var newData = {
+	                    id: data.val().id,
+	                    imgs: data.val().imgs
+	                };
+	                getData.push(newData);
+	                that.setState({ data: getData });
+	            });
+	        });
+	    },
 	    render: function render() {
 	        return React.createElement(
 	            'div',
@@ -25410,11 +25458,23 @@
 	            React.createElement(
 	                'div',
 	                { className: 'project-content animated fadeInUp' },
-	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c1.png', alt: '' }),
-	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c2.png', alt: '' }),
-	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c3.png', alt: '' }),
-	                React.createElement('img', { className: 'project-img img-responsive', src: 'img/projects/sinote/c4.png', alt: '' })
+	                this.state.data.map(function (result) {
+	                    return React.createElement(Covers, { key: result.id, data: result });
+	                })
 	            )
+	        );
+	    }
+	});
+
+	var Covers = React.createClass({
+	    displayName: 'Covers',
+
+	    render: function render() {
+	        console.log(this.props.data);
+	        return React.createElement(
+	            'span',
+	            null,
+	            this.props.data.text
 	        );
 	    }
 	});
