@@ -36,6 +36,9 @@ var Featured = React.createClass({
             data: []
         }
     },
+    handleClick: function(item, e) {
+       alert("hey joe");
+    },
     componentWillMount: function(){
         this.firebaseRef = new Firebase('https://vacom.firebaseio.com/home');
         var that = this;
@@ -56,7 +59,7 @@ var Featured = React.createClass({
            <div>
                     {this.state.data.map(function(object, i){
                         return <div className={'col-xs-6 col-md-3 animated fadeInUp'}>
-                               <Link to="/viewer" params={{ projectID: object.id}}  className={'thumbnail project-thumb project'}>
+                               <Link to="/viewer" params={{ projectID: object.id}}  className={'thumbnail project-thumb project ' + object.id}>
                                    <img src={object.imgsrc}/>
                                </Link>
                         </div>
