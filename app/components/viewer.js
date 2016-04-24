@@ -1,8 +1,14 @@
 var React = require('react');
 var Link = require('react-router').Link;
 
-//components
 
+
+//Styles
+var viewerImg = {
+    marginTop: '30px'
+};
+
+//components
 var Viewer = React.createClass({
     getInitialState: function (){
         return{
@@ -31,12 +37,13 @@ var Viewer = React.createClass({
         });
     },
     render() {
+        var projectID = localStorage.getItem("projectID");
         return (
             <div>
                 <div className={'row'}>
                     <div className={'col-md-6 col-xs-12'}>
                         {this.state.data.map(function(object, i){
-                            if(object.id == 1) {
+                            if(object.id == projectID) {
                                 return <div className={'introduction animated fadeInUp'}>
                                     <h1>{object.title}</h1>
                                     <p>{object.tags}</p>
@@ -48,13 +55,13 @@ var Viewer = React.createClass({
                 </div>
                 <div className={'row'}>
                         {this.state.data.map(function(object, i){
-                            if(object.id == 1) {
+                            if(object.id == projectID) {
                                 return <div className={'col-md-12'}>
-                                    <div className={'animated fadeInUp'}>
-                                        <img src={object.c1} className={'img-responsive'} alt=""/>
-                                        <img src={object.c2} className={'img-responsive'} alt=""/>
-                                        <img src={object.c3} className={'img-responsive'} alt=""/>
-                                        <img src={object.c4} className={'img-responsive'} alt=""/>
+                                    <div className={'animated fadeInUp'} >
+                                        <img src={object.c1} className={'img-responsive'} style={viewerImg} alt=""/>
+                                        <img src={object.c2} className={'img-responsive'} style={viewerImg} alt=""/>
+                                        <img src={object.c3} className={'img-responsive'} style={viewerImg} alt=""/>
+                                        <img src={object.c4} className={'img-responsive'} style={viewerImg} alt=""/>
                                     </div>
                                 </div>
                             }

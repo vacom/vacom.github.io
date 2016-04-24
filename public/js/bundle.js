@@ -24926,7 +24926,7 @@
 	        };
 	    },
 	    handleClick: function handleClick(item, e) {
-	        alert("hey joe");
+	        localStorage.setItem("projectID", item["id"]);
 	    },
 	    componentWillMount: function componentWillMount() {
 	        this.firebaseRef = new Firebase('https://vacom.firebaseio.com/home');
@@ -24953,11 +24953,11 @@
 	                    { className: 'col-xs-6 col-md-3 animated fadeInUp' },
 	                    React.createElement(
 	                        Link,
-	                        { to: '/viewer', params: { projectID: object.id }, className: 'thumbnail project-thumb project ' + object.id },
+	                        { to: '/viewer', onClick: this.handleClick.bind(this, object), className: 'thumbnail project-thumb project ' + object.id },
 	                        React.createElement('img', { src: object.imgsrc })
 	                    )
 	                );
-	            })
+	            }, this)
 	        );
 	    }
 	});
@@ -25312,6 +25312,9 @@
 	            data: []
 	        };
 	    },
+	    handleClick: function handleClick(item, e) {
+	        localStorage.setItem("projectID", item["id"]);
+	    },
 	    componentWillMount: function componentWillMount() {
 	        this.firebaseRef = new Firebase('https://vacom.firebaseio.com/projects');
 	        var that = this;
@@ -25337,11 +25340,11 @@
 	                    { className: 'col-xs-6 col-md-3 animated fadeInUp', style: WorksStyle },
 	                    React.createElement(
 	                        Link,
-	                        { to: '/viewer', params: { projectID: object.id }, className: 'thumbnail project-thumb project project_' },
+	                        { to: '/viewer', onClick: this.handleClick.bind(this, object), className: 'thumbnail project-thumb project project_' },
 	                        React.createElement('img', { id: object.id, src: object.imgsrc })
 	                    )
 	                );
-	            })
+	            }, this)
 	        );
 	    }
 	});
@@ -25357,8 +25360,12 @@
 	var React = __webpack_require__(1);
 	var Link = __webpack_require__(159).Link;
 
-	//components
+	//Styles
+	var viewerImg = {
+	    marginTop: '30px'
+	};
 
+	//components
 	var Viewer = React.createClass({
 	    displayName: 'Viewer',
 
@@ -25389,6 +25396,7 @@
 	        });
 	    },
 	    render: function render() {
+	        var projectID = localStorage.getItem("projectID");
 	        return React.createElement(
 	            'div',
 	            null,
@@ -25399,7 +25407,7 @@
 	                    'div',
 	                    { className: 'col-md-6 col-xs-12' },
 	                    this.state.data.map(function (object, i) {
-	                        if (object.id == 1) {
+	                        if (object.id == projectID) {
 	                            return React.createElement(
 	                                'div',
 	                                { className: 'introduction animated fadeInUp' },
@@ -25427,17 +25435,17 @@
 	                'div',
 	                { className: 'row' },
 	                this.state.data.map(function (object, i) {
-	                    if (object.id == 1) {
+	                    if (object.id == projectID) {
 	                        return React.createElement(
 	                            'div',
 	                            { className: 'col-md-12' },
 	                            React.createElement(
 	                                'div',
 	                                { className: 'animated fadeInUp' },
-	                                React.createElement('img', { src: object.c1, className: 'img-responsive', alt: '' }),
-	                                React.createElement('img', { src: object.c2, className: 'img-responsive', alt: '' }),
-	                                React.createElement('img', { src: object.c3, className: 'img-responsive', alt: '' }),
-	                                React.createElement('img', { src: object.c4, className: 'img-responsive', alt: '' })
+	                                React.createElement('img', { src: object.c1, className: 'img-responsive', style: viewerImg, alt: '' }),
+	                                React.createElement('img', { src: object.c2, className: 'img-responsive', style: viewerImg, alt: '' }),
+	                                React.createElement('img', { src: object.c3, className: 'img-responsive', style: viewerImg, alt: '' }),
+	                                React.createElement('img', { src: object.c4, className: 'img-responsive', style: viewerImg, alt: '' })
 	                            )
 	                        );
 	                    }

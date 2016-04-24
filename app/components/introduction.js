@@ -35,9 +35,10 @@ var Featured = React.createClass({
         return{
             data: []
         }
+
     },
     handleClick: function(item, e) {
-       alert("hey joe");
+        localStorage.setItem("projectID", item["id"]);
     },
     componentWillMount: function(){
         this.firebaseRef = new Firebase('https://vacom.firebaseio.com/home');
@@ -59,11 +60,12 @@ var Featured = React.createClass({
            <div>
                     {this.state.data.map(function(object, i){
                         return <div className={'col-xs-6 col-md-3 animated fadeInUp'}>
-                               <Link to="/viewer" params={{ projectID: object.id}}  className={'thumbnail project-thumb project ' + object.id}>
+                               <Link to="/viewer"  onClick={this.handleClick.bind(this,object)}  className={'thumbnail project-thumb project ' + object.id}>
                                    <img src={object.imgsrc}/>
                                </Link>
                         </div>
-                    })}
+                    }, this)}
+
            </div>
         );
     }
