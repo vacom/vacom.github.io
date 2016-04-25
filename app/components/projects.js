@@ -56,7 +56,7 @@ var Works = React.createClass({
         return (
             <div>
                 {this.state.data.map(function(object, i){
-                    return <div className={'col-xs-6 col-md-3 animated fadeInUp'} style={WorksStyle}>
+                    return <div className={'col-xs-6 col-md-3 animated fadeInUp'} style={WorksStyle} key={object.id}>
                         <Link  to="/viewer" onClick={this.handleClick.bind(this,object)}  className={'thumbnail project-thumb project project_'}>
                             <img id={object.id} src={object.imgsrc}/>
                         </Link>

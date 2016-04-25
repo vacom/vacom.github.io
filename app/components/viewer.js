@@ -56,7 +56,7 @@ var Viewer = React.createClass({
                 <div className={'row'}>
                         {this.state.data.map(function(object, i){
                             if(object.id == projectID) {
-                                return <div className={'col-md-12'}>
+                                return <div className={'col-md-12'} key={object.id}>
                                     <div className={'animated fadeInUp'} >
                                         <img src={object.c1} className={'img-responsive'} style={viewerImg} alt=""/>
                                         <img src={object.c2} className={'img-responsive'} style={viewerImg} alt=""/>

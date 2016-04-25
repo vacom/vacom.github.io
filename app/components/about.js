@@ -2,10 +2,16 @@ var React = require('react');
 var Link = require('react-router').Link;
 //components
 
+
+/*@todo remove this fixed height*/
+var aboutStyle = {
+    height: "377px"
+};
+
 var About = React.createClass({
     render() {
         return (
-            <div>
+            <div  style={aboutStyle}>
                 <div className={'row'}>
                     <div className={'col-md-6'}>
                         <div className={'introduction animated fadeInUp'}>

@@ -3,6 +3,9 @@ module.exports = {
     output: {
         filename: "public/js/bundle.js"
     },
+    devServer: {
+        historyApiFallback: true
+    },
     module: {
         loaders: [
             {

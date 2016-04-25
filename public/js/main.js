@@ -17,4 +17,13 @@ jQuery(document).ready(function(){
 		});
 	}
 
+	window.onscroll = function (e) {
+		var scroll = $(window).scrollTop();
+			if(scroll == 0){
+				$("a.navbar-brand").fadeIn(500);
+			}else{
+				$("a.navbar-brand").fadeOut(500);
+			}
+	}
+
 });

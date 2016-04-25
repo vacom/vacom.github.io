@@ -59,7 +59,7 @@ var Featured = React.createClass({
         return (
            <div>
                     {this.state.data.map(function(object, i){
-                        return <div className={'col-xs-6 col-md-3 animated fadeInUp'}>
+                        return <div className={'col-xs-6 col-md-3 animated fadeInUp'} key={object.id}>
                                <Link to="/viewer"  onClick={this.handleClick.bind(this,object)}  className={'thumbnail project-thumb project ' + object.id}>
                                    <img src={object.imgsrc}/>
                                </Link>
