@@ -53,7 +53,9 @@
 	var Route = __webpack_require__(159).Route;
 	var Link = __webpack_require__(159).Link;
 	var IndexRoute = __webpack_require__(159).IndexRoute;
-	var browserHistory = __webpack_require__(159).browserHistory;
+	//var browserHistory  = require('react-router').browserHistory; url pretty sem isto -># mas com os erros de refresh page
+
+	var createHashHistory = __webpack_require__(159).hashHistory; //ugly url
 
 	//components
 	var main = __webpack_require__(218);
@@ -66,7 +68,7 @@
 
 	ReactDOM(React.createElement(
 	    Router,
-	    { history: browserHistory },
+	    { history: createHashHistory },
 	    React.createElement(
 	        Route,
 	        { path: '/', component: main },
@@ -24950,7 +24952,7 @@
 	            this.state.data.map(function (object, i) {
 	                return React.createElement(
 	                    'div',
-	                    { className: 'col-xs-6 col-md-3 animated fadeInUp' },
+	                    { className: 'col-xs-6 col-md-3 animated fadeInUp', key: object.id },
 	                    React.createElement(
 	                        Link,
 	                        { to: '/viewer', onClick: this.handleClick.bind(this, object), className: 'thumbnail project-thumb project ' + object.id },
@@ -25143,12 +25145,17 @@
 	var Link = __webpack_require__(159).Link;
 	//components
 
+	/*@todo remove this fixed height*/
+	var aboutStyle = {
+	    height: "377px"
+	};
+
 	var About = React.createClass({
 	    displayName: 'About',
 	    render: function render() {
 	        return React.createElement(
 	            'div',
-	            null,
+	            { style: aboutStyle },
 	            React.createElement(
 	                'div',
 	                { className: 'row' },
@@ -25337,7 +25344,7 @@
 	            this.state.data.map(function (object, i) {
 	                return React.createElement(
 	                    'div',
-	                    { className: 'col-xs-6 col-md-3 animated fadeInUp', style: WorksStyle },
+	                    { className: 'col-xs-6 col-md-3 animated fadeInUp', style: WorksStyle, key: object.id },
 	                    React.createElement(
 	                        Link,
 	                        { to: '/viewer', onClick: this.handleClick.bind(this, object), className: 'thumbnail project-thumb project project_' },
@@ -25438,7 +25445,7 @@
 	                    if (object.id == projectID) {
 	                        return React.createElement(
 	                            'div',
-	                            { className: 'col-md-12' },
+	                            { className: 'col-md-12', key: object.id },
 	                            React.createElement(
 	                                'div',
 	                                { className: 'animated fadeInUp' },
