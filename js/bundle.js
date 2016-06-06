@@ -65,6 +65,7 @@
 	var viewer = __webpack_require__(224);
 	var contact = __webpack_require__(225);
 	var error = __webpack_require__(226);
+	var store = __webpack_require__(227);
 
 	ReactDOM(React.createElement(
 	    Router,
@@ -76,6 +77,7 @@
 	        React.createElement(Route, { path: 'about', component: about }),
 	        React.createElement(Route, { path: 'projects', component: projects }),
 	        React.createElement(Route, { path: 'viewer', component: viewer }),
+	        React.createElement(Route, { path: 'store', component: store }),
 	        React.createElement(Route, { path: 'contact', component: contact }),
 	        React.createElement(Route, { path: '*', component: error })
 	    )
@@ -25057,7 +25059,7 @@
 	                                    React.createElement(
 	                                        'span',
 	                                        null,
-	                                        'Coming Soon'
+	                                        'Loja'
 	                                    )
 	                                )
 	                            ),
@@ -25532,6 +25534,156 @@
 	});
 
 	module.exports = About;
+
+/***/ },
+/* 227 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Link = __webpack_require__(159).Link;
+
+	/*@todo remove this fixed height*/
+	var aboutStyle = {
+	    height: "377px"
+	};
+
+	var storeStyle = {
+	    height: "200px",
+	    width: "100%",
+	    display: "block"
+	};
+
+	var storeBuyButton = {
+	    color: "#fff !important",
+	    borderRadius: "0",
+	    borderColor: "#000",
+	    background: "#000",
+	    marginLeft: "10px"
+	};
+
+	var storeDefaultButton = {
+	    borderRadius: "0"
+	};
+
+	// style={'height: 200px; width: 100%; display: block;'}
+
+	var Store = React.createClass({
+	    displayName: 'Store',
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { style: aboutStyle },
+	            React.createElement(
+	                'div',
+	                { className: 'row' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'col-md-12' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'introduction animated fadeInUp' },
+	                        React.createElement(
+	                            'h1',
+	                            null,
+	                            'Loja'
+	                        ),
+	                        React.createElement(
+	                            'p',
+	                            null,
+	                            'Please check my work for sale.'
+	                        )
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                { className: 'animated fadeInUp' },
+	                React.createElement(
+	                    'div',
+	                    { className: 'row' },
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-sm-6 col-md-4' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'thumbnail' },
+	                            React.createElement('img', { style: storeStyle, alt: 'ThatEvent', src: 'https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/134/1342/1342980/cover-o.jpg?1465237850', 'data-holder-rendered': 'true' }),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'caption' },
+	                                React.createElement(
+	                                    'h3',
+	                                    null,
+	                                    'ThatEvent – Waiting for you'
+	                                ),
+	                                React.createElement(
+	                                    'p',
+	                                    null,
+	                                    'ThatEvent is a minimal, responsive coming soon theme. It\'s simple and a fantastic way to inform your users when your new website...'
+	                                ),
+	                                React.createElement(
+	                                    'p',
+	                                    null,
+	                                    React.createElement(
+	                                        'a',
+	                                        { href: 'http://vacom.me/themes/thatevent/', target: '_blank', style: storeDefaultButton, className: 'btn btn-default', role: 'button' },
+	                                        'Demo'
+	                                    ),
+	                                    React.createElement(
+	                                        'a',
+	                                        { href: 'https://crmrkt.com/RzKB8', target: '_blank', style: storeBuyButton, className: 'btn btn-primary', role: 'button' },
+	                                        '2$ - Buy'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    ),
+	                    React.createElement(
+	                        'div',
+	                        { className: 'col-sm-6 col-md-4' },
+	                        React.createElement(
+	                            'div',
+	                            { className: 'thumbnail' },
+	                            React.createElement('img', { style: storeStyle, alt: 'ThatAgency', src: 'https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/132/1328/1328196/1-f.jpg?1464788114', 'data-holder-rendered': 'true' }),
+	                            React.createElement(
+	                                'div',
+	                                { className: 'caption' },
+	                                React.createElement(
+	                                    'h3',
+	                                    null,
+	                                    'ThatAgency - Your Online Presence'
+	                                ),
+	                                React.createElement(
+	                                    'p',
+	                                    null,
+	                                    'ThatAgency is a template designed and developed to fit the needs of your agency. It is built upon Bootstrap, it is simple, modern, responsive and is a template...'
+	                                ),
+	                                React.createElement(
+	                                    'p',
+	                                    null,
+	                                    React.createElement(
+	                                        'a',
+	                                        { href: 'http://vacom.me/themes/thatagency/', target: '_blank', style: storeDefaultButton, className: 'btn btn-default', role: 'button' },
+	                                        'Demo'
+	                                    ),
+	                                    React.createElement(
+	                                        'a',
+	                                        { href: 'https://crmrkt.com/XW8GW', target: '_blank', style: storeBuyButton, className: 'btn btn-primary', role: 'button' },
+	                                        '6$ - Buy'
+	                                    )
+	                                )
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = Store;
 
 /***/ }
 /******/ ]);
