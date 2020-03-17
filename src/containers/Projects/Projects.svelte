@@ -1,5 +1,5 @@
 <script>
-  let detailed = false;
+  export let detailed = false;
 </script>
 
 {#if detailed}

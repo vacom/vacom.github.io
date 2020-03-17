@@ -1,15 +1,20 @@
 <script>
-  import { Hero, Navigation, Footer } from "./components";
-  import Projects from "./containers/Projects/Projects.svelte";
-  import Services from "./containers/Services/Services.svelte";
-  import About from "./containers/About/About.svelte";
-  import Details from "./containers/Projects/Details.svelte";
-  import Contact from "./containers/Contact/Contact.svelte";
+  import { Router, Route } from "svelte-routing";
+  import Home from "./containers/Home/Page.svelte";
+  import About from "./containers/About/Page.svelte";
+  import Projects from "./containers/Projects/Page.svelte";
+  import Contact from "./containers/Contact/Page.svelte";
+
+   let url = "";
 </script>
 
-
-<Navigation />
-<Hero />
-<Projects />
-<Services />
-<Footer />
+<Router {url}>
+  <Route path="contact" component={Contact} />
+  <Route path="themes" component={About} />
+  <Route path="opensource" component={About} />
+  <Route path="projects" component={Projects} />
+  <Route path="about" component={About} />
+  <Route path="/">
+    <Home />
+  </Route>
+</Router>

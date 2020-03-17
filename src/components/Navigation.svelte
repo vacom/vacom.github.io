@@ -1,6 +1,10 @@
+<script>
+  import { link } from "svelte-routing";
+</script>
+
 <nav class="navbar navbar-expand-lg main-nav " id="navbar">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="/" use:link>
       <h3>vacom</h3>
     </a>
 
@@ -18,27 +22,27 @@
     <div class="collapse navbar-collapse" id="navbarsExample09">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="/" use:link>Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.html">About</a>
+          <a class="nav-link" href="/about" use:link>About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Projects</a>
+          <a class="nav-link" href="/projects" use:link>Projects</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Open-source</a>
+          <a class="nav-link" href="/opensource" use:link>Open-source</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Themes</a>
+          <a class="nav-link" href="/themes" use:link>Themes</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link" href="/contact" use:link>Contact</a>
         </li>
       </ul>
     </div>
