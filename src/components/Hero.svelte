@@ -1,22 +1,21 @@
+<script>
+  export let initialText = "A great initial text";
+  export let text = "A great text to describe";
+  export let description = `A great description to show`;
+</script>
+
 <section class="section banner">
   <div class="container">
     <div class="row">
       <div class="col-lg-10">
         <h2 class="cd-headline clip is-full-width mb-4 ">
-          I provide
+          {initialText}
           <br />
           <span class="cd-words-wrapper text-color">
-            <b class="is-visible">Design solutions.</b>
-            <b>Creative Ideas.</b>
-            <b>Professional Content.</b>
+            <b>{text}</b>
           </span>
         </h2>
-        <p>
-          I must explain to you how all this mistaken idea of denouncing
-          pleasure and praising pain
-          <br />
-          was born and I will give you a complete account of the system
-        </p>
+        <p>{description}</p>
       </div>
     </div>
   </div>

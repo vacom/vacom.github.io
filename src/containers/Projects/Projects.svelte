@@ -6,6 +6,7 @@
   export let heading = {};
   export let detailed = false;
   export let filters = false;
+  export let data = [];
 </script>
 
 {#if detailed}
@@ -22,12 +23,9 @@
 
     <div class="row shuffle-wrapper portfolio-gallery">
 
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      {#each data as item}
+        <Project url={`/project/${item.id}`} {...item} />
+      {/each}
 
     </div>
   </div>

@@ -1,8 +1,15 @@
 <script>
   import { Layout } from "../../components";
   import Projects from "../Projects/Projects.svelte";
+    import AllProjects from "./data"
+
+  let data = {
+    initialText: "I provide open",
+    colorText: "Design Solutions.",
+    text: "My work is presented here, check them below."
+  };
 </script>
 
 <Layout>
-  <Projects detailed filters={false} />
+  <Projects heading={data} data={AllProjects} detailed filters={false} />
 </Layout>
