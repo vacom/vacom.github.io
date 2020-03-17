@@ -41,9 +41,6 @@
           <a class="nav-link" href="/themes" use:link>Themes</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/contact" use:link>Contact</a>
-        </li>
       </ul>
     </div>
   </div>

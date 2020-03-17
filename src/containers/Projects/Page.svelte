@@ -4,5 +4,5 @@
 </script>
 
 <Layout>
-  <Projects detailed={true} />
+  <Projects detailed filters />
 </Layout>

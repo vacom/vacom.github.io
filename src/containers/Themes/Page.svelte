@@ -1,9 +1,8 @@
 <script>
-  import { Layout, Hero } from "../../components";
+  import { Layout } from "../../components";
   import Projects from "../Projects/Projects.svelte";
 </script>
 
 <Layout>
-  <Hero />
-  <Projects />
+  <Projects detailed filters={false} />
 </Layout>

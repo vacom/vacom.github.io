@@ -1,38 +1,49 @@
+<script>
+  export let text = "Copyrights © 2020. ";
+  export let author = "Vitor Amaral | vacom";
+  export let url = "https://www.linkedin.com/in/vacom/";
+  export let facebook = "https://www.facebook.com/storytics.studio";
+  export let twitter = "https://twitter.com/vacom_me";
+  export let github = "https://github.com/vacom";
+  export let linkedin = "https://www.linkedin.com/in/vacom/";
+  export let store = "https://creativemarket.com/storytics";
+</script>
+
 <section class="footer">
   <div class="container">
     <div class="row ">
       <div class="col-lg-6">
         <p class="mb-0">
-          Copyrights © 2019. Designed & Developed by
-          <a href="themefisher.com" class="text-white">Themefisher</a>
+          {text}
+          <a href={url} target="_blank" class="text-white">{author}</a>
         </p>
       </div>
       <div class="col-lg-6">
         <div class="widget footer-widget text-lg-right mt-5 mt-lg-0">
           <ul class="list-inline mb-0">
             <li class="list-inline-item">
-              <a href="https://www.facebook.com/themefisher" target="_blank">
-                <i class="ti-facebook mr-3" />
+              <a href={facebook} target="_blank">
+                <i class="fab fa-facebook-f" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://twitter.com/themefisher" target="_blank">
-                <i class="ti-twitter mr-3" />
+              <a href={twitter} target="_blank">
+                <i class="fab fa-twitter" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://github.com/themefisher/" target="_blank">
-                <i class="ti-github mr-3" />
+              <a href={github} target="_blank">
+                <i class="fab fa-github" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://www.pinterest.com/themefisher/" target="_blank">
-                <i class="ti-pinterest mr-3" />
+              <a href={linkedin} target="_blank">
+                <i class="fab fa-linkedin-in" />
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="https://dribbble.com/themefisher/" target="_blank">
-                <i class="ti-dribbble mr-3" />
+              <a href={store} target="_blank">
+                <i class="fas fa-store" />
               </a>
             </li>
           </ul>
