@@ -32,7 +32,7 @@
   }
 
   .portfolio .btn-group .btn:hover {
-    color: #f44336;
+    color: #00f;
   }
 
   .btn {

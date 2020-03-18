@@ -1,4 +1,6 @@
 <script>
+import { fade } from 'svelte/transition';
+
   export let initialText = "A great initial text";
   export let text = "A great text to describe";
   export let description = `A great description to show`;
@@ -6,7 +8,7 @@
 
 <style>
   .text-color {
-    color: #f44336;
+    color: #00f;
   }
   .section {
     padding: 120px 0px;
@@ -50,7 +52,7 @@
   }
 </style>
 
-<section class="section banner">
+<section class="section banner" transition:fade>
   <div class="container">
     <div class="row">
       <div class="col-lg-10">

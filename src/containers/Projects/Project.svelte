@@ -1,5 +1,6 @@
 <script>
   import { link } from "svelte-routing";
+  import { fade } from 'svelte/transition';
   export let category = "Web";
   export let title = "Web Project";
   export let image = "images/portfolio/4.jpg";
@@ -49,7 +50,7 @@
     opacity: 0;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background-color: rgba(47, 50, 56, 0.8);
+    background-color: #bcc3ca;
   }
 
   .inner-box:hover .image img {
@@ -84,9 +85,12 @@
     padding: 10px 40px;
   }
 
+  .overlay-content {
+    text-decoration: none;
+  }
+
   .overlay-content h5 {
     text-transform: capitalize;
-    background: rgba(255, 255, 255, 0.9);
     padding: 0px 8px;
     margin-bottom: 0px;
     -webkit-transform: translateX(-150px);
@@ -101,7 +105,6 @@
     padding: 0px 8px;
     margin-top: 2px;
     text-transform: capitalize;
-    background: rgba(255, 255, 255, 0.9);
     color: #2f3238;
     -webkit-transform: translateX(-150px);
     transform: translateX(-150px);
@@ -110,18 +113,24 @@
   }
 </style>
 
-<div class="col-lg-4 col-6 mb-4 shuffle-item">
-  <div class="position-relative inner-box">
-    <div class="image position-relative">
-      <img src={image} alt="portfolio-image" class="img-fluid w-100 d-block" />
-      <div class="overlay-box">
-        <div class="overlay-inner">
-          <a class="overlay-content" href={url} use:link>
-            <h5 class="mb-0">{category}</h5>
-            <p>{title}</p>
-          </a>
+<div class="col-lg-4 col-6 mb-4 shuffle-item" transition:fade>
+  <a class="overlay-content" href={url} use:link>
+    <div class="position-relative inner-box">
+      <div class="image position-relative">
+        <img
+          src={image}
+          alt="portfolio-image"
+          class="img-fluid w-100 d-block" />
+        <div class="overlay-box">
+          <div class="overlay-inner">
+            <span class="overlay-content">
+              <h5 class="mb-0">{category}</h5>
+              <p>{title}</p>
+            </span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </a>
+
 </div>

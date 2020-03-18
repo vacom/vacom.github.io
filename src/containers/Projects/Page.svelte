@@ -11,5 +11,5 @@
 </script>
 
 <Layout>
-  <Projects heading={data} data={AllProjects} detailed filters />
+  <Projects heading={data} data={AllProjects} detailed filters/>
 </Layout>

@@ -12,16 +12,20 @@
 <style>
   .footer {
     padding: 60px 0px;
-    background: #000;
+    background: #6b7c8d;
+  }
+
+  .copy,
+  .footer-widget a {
+    color: #000;
   }
 
   .footer-widget a {
-    color: rgba(255, 255, 255, 0.5);
     text-transform: capitalize;
   }
 
   .footer-widget a:hover {
-    color: #f44336;
+    color: #00f;
   }
 </style>
 
@@ -29,7 +33,7 @@
   <div class="container">
     <div class="row ">
       <div class="col-lg-6">
-        <p class="mb-0">
+        <p class="copy mb-0">
           {text}
           <a href={url} target="_blank" class="text-white">{author}</a>
         </p>

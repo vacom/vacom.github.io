@@ -1,4 +1,5 @@
 <script>
+import { fade } from 'svelte/transition';
   import { Layout } from "../../components";
   import Block from "./Block.svelte";
 
@@ -33,7 +34,7 @@
 
 <Layout>
 
-  <section class="section banner-3">
+  <section class="section banner-3" transition:fade>
     <div class="container">
       <div class="row justify-content-center align-items-center">
 

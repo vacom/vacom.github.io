@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -5,17 +7,17 @@
 
 body {
   color: #333;
+  background: #f0f2f3;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.166667px;
   line-height: 1.7em;
+  font-family: "Lato", sans-serif;
 }
 
 p {
-  color: #818385;
+  color: #000000bf;
 }
 
 h1,
@@ -30,7 +32,6 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: "Work Sans", sans-serif;
   color: #000;
   font-weight: 600;
 }

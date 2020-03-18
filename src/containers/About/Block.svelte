@@ -1,4 +1,5 @@
 <script>
+import { fade } from 'svelte/transition';
   export let title = "Work Experiences.";
   export let data = [
     {
@@ -50,7 +51,7 @@
   }
 </style>
 
-<section class="section about border-top border-bottom">
+<section class="section about border-top border-bottom" transition:fade>
   <div class="container">
     <div class="row">
       <div class="col-lg-4 mb-5">

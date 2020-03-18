@@ -6,6 +6,6 @@
 
 
 <Layout>
-  <Hero initialText="A great initial text" text="A great text to describe" description="A great description to show" />
+  <Hero initialText="CREATIVITY IS" text="INTELLIGENCE HAVING FUN." description="Please check my portfolio. My creative and simplicity modern projects." />
   <Projects data={FeaturedProjects} />
 </Layout>

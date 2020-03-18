@@ -41,7 +41,7 @@
   }
 
   .btn-main {
-    background: #f44336;
+    background: #00f;
     color: #fff;
   }
 

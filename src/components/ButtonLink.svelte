@@ -12,6 +12,7 @@
     line-height: 14px;
     font-weight: 600;
     box-shadow: #999999 0px 0px 0px 0px;
+    border-radius: 3px;
   }
 
   .btn:focus {
@@ -21,13 +22,13 @@
   }
 
   .btn-main {
-    background: #f44336;
+    background: #000;
     color: #fff;
   }
 
   .btn-main:hover {
     color: #fff !important;
-    background: #000;
+    background: #00f;
   }
 </style>
 

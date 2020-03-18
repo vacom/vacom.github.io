@@ -10,6 +10,10 @@
     font-size: 14px;
     letter-spacing: 1px;
     font-weight: 700;
+    color: #6b7c8d;
+  }
+
+   .navbar-nav .nav-link:hover {
     color: #000;
   }
 

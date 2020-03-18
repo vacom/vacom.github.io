@@ -1,4 +1,5 @@
 <script>
+import { fade } from 'svelte/transition';
   export let initialText = "I provide";
   export let colorText = "Design Solutions.";
   export let text = "My work is presented here, check them below.";
@@ -6,7 +7,7 @@
 
 <style>
   .text-color {
-    color: #f44336;
+    color: #00f;
   }
   .section {
     padding: 120px 0px;
@@ -45,7 +46,7 @@
   }
 </style>
 
-<section class="section banner pb-0">
+<section class="section banner pb-0" transition:fade>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8 text-center">

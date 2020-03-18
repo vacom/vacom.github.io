@@ -34,7 +34,7 @@
     width: 40px;
     height: 2px;
     margin-left: -25px;
-    background: #f44336;
+    background: #00f;
   }
 
   .section {
