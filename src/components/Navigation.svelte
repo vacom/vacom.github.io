@@ -2,6 +2,33 @@
   import { link } from "svelte-routing";
 </script>
 
+<style>
+  
+  .navbar-nav .nav-link {
+    padding: 20px 15px !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .main-nav .header-top-socials a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    padding: 20px 6px;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 20px 15px !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+</style>
+
 <nav class="navbar navbar-expand-lg main-nav " id="navbar">
   <div class="container">
     <a class="navbar-brand" href="/" use:link>
@@ -11,11 +38,7 @@
     <button
       class="navbar-toggler collapsed"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarsExample09"
-      aria-controls="navbarsExample09"
-      aria-expanded="false"
-      aria-label="Toggle navigation">
+      data-toggle="collapse">
       <span class="ti-align-justify" />
     </button>
 

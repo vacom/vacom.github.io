@@ -4,6 +4,52 @@
   export let description = `A great description to show`;
 </script>
 
+<style>
+  .text-color {
+    color: #f44336;
+  }
+  .section {
+    padding: 120px 0px;
+  }
+
+  .cd-headline.clip span {
+    padding: 0px;
+  }
+
+  .banner .cd-headline {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  @media (max-width: 575px) {
+    .banner .cd-headline {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .banner .cd-headline {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .banner .cd-headline {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .banner .cd-headline {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+</style>
+
 <section class="section banner">
   <div class="container">
     <div class="row">

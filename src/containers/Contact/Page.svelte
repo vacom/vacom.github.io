@@ -2,6 +2,55 @@
   import { Layout } from "../../components";
 </script>
 
+<style>
+  .page-title h1 {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  .page-title h1:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0px;
+    width: 40px;
+    height: 2px;
+    margin-left: -25px;
+    background: #f44336;
+  }
+
+  .section {
+    padding: 120px 0px;
+  }
+
+  .btn {
+    padding: 18px 38px;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    border-radius: 0px;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 600;
+    box-shadow: #999999 0px 0px 0px 0px;
+  }
+
+  .btn:focus {
+    outline: 0px;
+    border: 0px;
+    box-shadow: none;
+  }
+
+  .btn-main {
+    background: #f44336;
+    color: #fff;
+  }
+
+  .btn-main:hover {
+    color: #fff !important;
+    background: #000;
+  }
+</style>
+
 <Layout>
 
   <section class="page-title section pb-0">

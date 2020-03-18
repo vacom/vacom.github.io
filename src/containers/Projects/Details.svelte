@@ -20,6 +20,28 @@
   };
 </script>
 
+<style>
+  .page-title h1 {
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  .page-title h1:after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: 0px;
+    width: 40px;
+    height: 2px;
+    margin-left: -25px;
+    background: #f44336;
+  }
+
+  .section {
+    padding: 120px 0px;
+  }
+</style>
+
 <Layout>
   <section class="page-title section pb-0">
     <div class="container">

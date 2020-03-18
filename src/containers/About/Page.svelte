@@ -12,6 +12,25 @@
   export let list = ["Web Design", "Brand Identity", "Development"];
 </script>
 
+<style>
+  .section {
+    padding: 120px 0px;
+  }
+
+  .banner-3 {
+    position: relative;
+  }
+
+  .about-list {
+    line-height: 40px;
+  }
+
+  .about-list li {
+    text-transform: capitalize;
+    color: #000;
+  }
+</style>
+
 <Layout>
 
   <section class="section banner-3">

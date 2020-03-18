@@ -9,6 +9,22 @@
   export let store = "https://creativemarket.com/storytics";
 </script>
 
+<style>
+  .footer {
+    padding: 60px 0px;
+    background: #000;
+  }
+
+  .footer-widget a {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: capitalize;
+  }
+
+  .footer-widget a:hover {
+    color: #f44336;
+  }
+</style>
+
 <section class="footer">
   <div class="container">
     <div class="row ">

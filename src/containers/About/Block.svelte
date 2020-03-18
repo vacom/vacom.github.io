@@ -40,6 +40,16 @@
   ];
 </script>
 
+<style>
+  .section {
+    padding: 120px 0px;
+  }
+
+  .about-info {
+    margin-top: 15px;
+  }
+</style>
+
 <section class="section about border-top border-bottom">
   <div class="container">
     <div class="row">

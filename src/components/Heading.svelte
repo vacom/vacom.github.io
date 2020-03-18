@@ -4,6 +4,47 @@
   export let text = "My work is presented here, check them below.";
 </script>
 
+<style>
+  .text-color {
+    color: #f44336;
+  }
+  .section {
+    padding: 120px 0px;
+  }
+  .banner {
+    font-size: 56px;
+    line-height: 70px;
+  }
+
+  @media (max-width: 575px) {
+    .banner {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .banner {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .banner {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .banner {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+</style>
+
 <section class="section banner pb-0">
   <div class="container">
     <div class="row justify-content-center">

@@ -1,3 +1,20 @@
+<style>
+  .section {
+    padding: 120px 0px;
+  }
+
+  .service-home {
+    position: relative;
+  }
+
+  .service-item i {
+    font-size: 35px;
+    float: left;
+    width: 65px;
+    height: 120px;
+  }
+</style>
+
 <section class="section service-home border-top">
   <div class="container">
     <div class="row">
