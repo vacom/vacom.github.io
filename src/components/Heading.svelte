@@ -1,5 +1,5 @@
 <script>
-import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
   export let initialText = "I provide";
   export let colorText = "Design Solutions.";
   export let text = "My work is presented here, check them below.";

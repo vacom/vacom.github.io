@@ -3,7 +3,6 @@
 </script>
 
 <style>
-  
   .navbar-nav .nav-link {
     padding: 20px 15px !important;
     text-transform: uppercase;
@@ -13,7 +12,7 @@
     color: #6b7c8d;
   }
 
-   .navbar-nav .nav-link:hover {
+  .navbar-nav .nav-link:hover {
     color: #000;
   }
 

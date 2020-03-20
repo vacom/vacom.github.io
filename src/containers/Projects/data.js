@@ -1,53 +1,25 @@
+//public/
+const publicFolder = "public/";
+
 export const FeaturedProjects = [
   {
-    id: "pr-1",
-    category: "Web",
-    title: "Web Project",
-    image: "images/portfolio/4.jpg"
-  },
-  {
-    id: "pr-2",
-    category: "Web",
-    title: "Web Project",
-    image: "images/portfolio/4.jpg"
-  },
-  {
-    id: "pr-3",
-    category: "Web",
-    title: "Web Project",
-    image: "images/portfolio/4.jpg"
-  },
-  {
-    id: "pr-4",
-    category: "Web",
-    title: "Web Project",
-    image: "images/portfolio/4.jpg"
-  },
-  {
-    id: "pr-5",
-    category: "Web",
-    title: "Web Project",
-    image: "images/portfolio/4.jpg"
-  },
-  {
-    id: "pr-6",
-    category: "Web",
-    title: "Web Project",
-    image: "images/portfolio/4.jpg"
+    id: "pr-primrose",
+    title: "Web App",
+    category: "Primrose",
+    image: `${publicFolder}images/projects/primrose/cover.png`
   }
 ];
 
 export const AllProjects = [...FeaturedProjects];
 
-
 export const ProjectsDetails = [
   {
-    id: "pr-1",
-    title: "A project title",
-    subTitle: "A project nice subtitle",
-    client: "Microsoft",
-    category: "Web Design",
-    url: "https://www.google.com",
+    id: "pr-primrose",
+    title: "Primrose",
+    subTitle: "Application to summarize and analyze Primavera data",
+    client: "KSI",
+    category: "Web App",
+    url: null,
     description: [
       `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
               eligendi fugiat ad cupiditate hic, eum debitis ipsum, quos non
@@ -59,4 +31,4 @@ export const ProjectsDetails = [
     ],
     images: ["images/portfolio/02.jpg", "images/portfolio/02.jpg"]
   }
-]
+];

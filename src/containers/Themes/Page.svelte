@@ -7,13 +7,7 @@
   We design and create Themes and Templates for bloggers, entrepreneurs, and creatives.
   A Web Design Studio with a story to tell. Every theme we create tells a story.`;
 
-  export let list = [
-    "Templates",
-    "Themes",
-    "Agencies",
-    "CSS",
-    "Html",
-  ];
+  export let list = ["Templates", "Themes", "Agencies", "CSS", "Html"];
 </script>
 
 <style>
@@ -28,7 +22,10 @@
 
 <Layout>
 
-  <Heading initialText="I create" colorText="Themes & Templates" text="Beautiful and simple themes for agencies and photographers" />
+  <Heading
+    initialText="I create"
+    colorText="Themes & Templates"
+    text="Beautiful and simple themes for agencies and photographers" />
 
   <section class="section banner-3 theme-section" transition:fade>
     <div class="container">

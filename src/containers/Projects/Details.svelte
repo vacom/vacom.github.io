@@ -1,5 +1,9 @@
 <script>
+  import { onMount } from "svelte";
   import { Layout, ButtonLink } from "../../components";
+  import { ProjectsDetails } from "./data";
+
+  export let params;
 
   export let data = {
     title: "A project title",
@@ -18,6 +22,12 @@
     ],
     images: ["images/portfolio/02.jpg", "images/portfolio/02.jpg"]
   };
+
+  onMount(() => {
+    console.log("content!! = ", params);
+    const [content] = ProjectsDetails.filter(item => item.id === params.id);
+    data = content;
+  });
 </script>
 
 <style>
@@ -76,9 +86,13 @@
             <h5 class="mb-0">Category</h5>
             <p>{data.category}</p>
           </div>
-          <div class="mt-5">
-            <ButtonLink href={data.url}>View project</ButtonLink>
-          </div>
+
+          {#if data.url !== null}
+            <div class="mt-5">
+              <ButtonLink href={data.url}>View project</ButtonLink>
+            </div>
+          {/if}
+
         </div>
       </div>
 

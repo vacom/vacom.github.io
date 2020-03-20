@@ -1,4 +1,4 @@
- const data = [
+const data = [
   {
     id: "open-1",
     category: "Web",

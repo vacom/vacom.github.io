@@ -1,15 +1,23 @@
 <script>
   import { Layout, Action } from "../../components";
-  import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
   import Block from "./Block.svelte";
 
   export let name = "Vitor Amaral";
-  export let subTitle = "Full Stack Developer & Management and Information Programming";
+  export let subTitle =
+    "Full Stack Developer & Management and Information Programming";
   export let description = `I'm 27 years old from Portugal, I am a Full Stack Developer.
    With experience in different fields such as creating mobile applications, web, desktop and APIs in GraphQL or Rest.
    I invite you to look at my work and my Linkedin for more information.`;
 
-  export let list = ["React", "TypeScript", "Nodejs", "GraphQL", "Serverless", "Svelte"];
+  export let list = [
+    "React",
+    "TypeScript",
+    "Nodejs",
+    "GraphQL",
+    "Serverless",
+    "Svelte"
+  ];
 </script>
 
 <style>
@@ -59,7 +67,10 @@
   </section>
 
   <Block />
-  <br>
-  <Action title="Want to learn more about me?" action="Check my Linkedin" url="https://www.linkedin.com/in/vacom/"/>
+  <br />
+  <Action
+    title="Want to learn more about me?"
+    action="Check my Linkedin"
+    url="https://www.linkedin.com/in/vacom/" />
 
 </Layout>

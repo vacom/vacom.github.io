@@ -10,11 +10,10 @@
   };
 </script>
 
-
 <svelte:head>
   <title>Vitor Amaral | Projects</title>
 </svelte:head>
 
 <Layout>
-  <Projects heading={data} data={AllProjects} detailed filters={false}/>
+  <Projects heading={data} data={AllProjects} detailed filters={false} />
 </Layout>

@@ -1,6 +1,6 @@
 <script>
   import { link } from "svelte-routing";
-  import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
   export let category = "Web";
   export let title = "Web Project";
   export let image = "images/portfolio/4.jpg";
@@ -112,8 +112,6 @@
     transition: all 0.5s;
   }
 </style>
-
-
 
 <div class="col-lg-4 col-6 mb-4 shuffle-item" transition:fade>
   <a class="overlay-content" href={url} use:link>

@@ -13,7 +13,9 @@
 <Router {url}>
   <Route path="themes" component={Themes} />
   <Route path="opensource" component={OpenSource} />
-  <Route path="project/:id" component={ProjectDetails} />
+  <Route path="project/:id" let:params>
+    <ProjectDetails {params} />
+  </Route>
   <Route path="projects" component={Projects} />
   <Route path="about" component={About} />
   <Route path="/">

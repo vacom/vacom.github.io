@@ -1,7 +1,7 @@
 <script>
   import { Layout } from "../../components";
   import Projects from "../Projects/Projects.svelte";
-  import AllProjects from "./data"
+  import AllProjects from "./data";
 
   let data = {
     initialText: "I develop",
