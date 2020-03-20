@@ -1,0 +1,106 @@
+<style>
+  .section {
+    padding: 120px 0px;
+  }
+
+  .service-home {
+    position: relative;
+  }
+
+  .service-item i {
+    font-size: 35px;
+    float: left;
+    width: 65px;
+    height: 120px;
+  }
+</style>
+
+<section class="section service-home border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h2 class="mb-2 ">Core Services.</h2>
+        <p class="mb-5">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Necessitatibus, totam ipsa quia hic odit a sit laboriosam voluptatem
+          in, blanditiis.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="service-item mb-5" data-aos="fade-left">
+          <i class="ti-layout" />
+          <h4 class="my-3">Web Development</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            earum.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div
+          class="service-item mb-5"
+          data-aos="fade-left"
+          data-aos-delay="450">
+          <i class="ti-announcement" />
+          <h4 class="my-3">Digital Marketing</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            earum.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div
+          class="service-item mb-5 mb-lg-0"
+          data-aos="fade-left"
+          data-aos-delay="750">
+          <i class="ti-layers" />
+          <h4 class="my-3">Graphics Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            earum.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="service-item" data-aos="fade-left" data-aos-delay="750">
+          <i class="ti-anchor" />
+          <h4 class="my-3">Branding Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            earum.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div
+          class="service-item mb-5"
+          data-aos="fade-left"
+          data-aos-delay="950">
+          <i class="ti-video-camera" />
+          <h4 class="my-3">Video Marketing</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            earum.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div
+          class="service-item mb-5 mb-lg-0"
+          data-aos="fade-left"
+          data-aos-delay="1050">
+          <i class="ti-android" />
+          <h4 class="my-3">App Design</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto,
+            earum.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
