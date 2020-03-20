@@ -1,16 +1,15 @@
 <script>
-import { fade } from 'svelte/transition';
-  import { Layout } from "../../components";
+  import { Layout, Action } from "../../components";
+  import { fade } from 'svelte/transition';
   import Block from "./Block.svelte";
 
   export let name = "Vitor Amaral";
-  export let subTitle = "I create premium designs and technology";
-  export let description = `I was born in Los Angeles in 1980.I'm 23 years old creative web
-            designer, specializing in User Interface Design and
-            Development.Veritatis culpa sunt alias esse fuga accusamus nostrum,
-            iusto neque.`;
+  export let subTitle = "Full Stack Developer & Management and Information Programming";
+  export let description = `I'm 27 years old from Portugal, I am a Full Stack Developer.
+   With experience in different fields such as creating mobile applications, web, desktop and APIs in GraphQL or Rest.
+   I invite you to look at my work and my Linkedin for more information.`;
 
-  export let list = ["Web Design", "Brand Identity", "Development"];
+  export let list = ["React", "TypeScript", "Nodejs", "GraphQL", "Serverless", "Svelte"];
 </script>
 
 <style>
@@ -31,6 +30,10 @@ import { fade } from 'svelte/transition';
     color: #000;
   }
 </style>
+
+<svelte:head>
+  <title>Vitor Amaral | About</title>
+</svelte:head>
 
 <Layout>
 
@@ -56,6 +59,7 @@ import { fade } from 'svelte/transition';
   </section>
 
   <Block />
-  <Block />
+  <br>
+  <Action title="Want to learn more about me?" action="Check my Linkedin" url="https://www.linkedin.com/in/vacom/"/>
 
 </Layout>

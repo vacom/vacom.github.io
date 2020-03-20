@@ -51,6 +51,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>Vitor Amaral | Contact</title>
+</svelte:head>
+
 <Layout>
 
   <section class="page-title section pb-0">

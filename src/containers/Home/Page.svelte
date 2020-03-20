@@ -5,6 +5,10 @@
 </script>
 
 
+<svelte:head>
+  <title>Vitor Amaral | Home</title>
+</svelte:head>
+
 <Layout>
   <Hero initialText="CREATIVITY IS" text="INTELLIGENCE HAVING FUN." description="Please check my portfolio. My creative and simplicity modern projects." />
   <Projects data={FeaturedProjects} />

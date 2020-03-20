@@ -1,40 +1,32 @@
 <script>
-import { fade } from 'svelte/transition';
+  import { fade } from 'svelte/transition';
   export let title = "Work Experiences.";
   export let data = [
     {
       list: [
         {
-          title: "UI UX Designer at Behance",
-          subTitle: "January 2015 - August 2018",
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                nec bibendum mauris. Curabitur quis vehicula leo. Vivamus leo
-                ipsum`
+          title: "Frontend Developer at Mindera",
+          subTitle: "October 2018 - Present",
+          description: ``
         },
         {
-          title: "UI UX Designer at Behance",
-          subTitle: "January 2015 - August 2018",
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                nec bibendum mauris. Curabitur quis vehicula leo. Vivamus leo
-                ipsum`
+          title: "Frontend Developer at UALabs",
+          subTitle: "February 2019 - October 2019",
+          description: ``
         }
       ]
     },
     {
       list: [
         {
-          title: "UI UX Designer at Behance",
-          subTitle: "January 2015 - August 2018",
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                nec bibendum mauris. Curabitur quis vehicula leo. Vivamus leo
-                ipsum`
+          title: "Frontend Developer at Pictonio",
+          subTitle: "February 2018 - July 2018",
+          description: ``
         },
         {
-          title: "UI UX Designer at Behance",
-          subTitle: "January 2015 - August 2018",
-          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                nec bibendum mauris. Curabitur quis vehicula leo. Vivamus leo
-                ipsum`
+          title: "Web Developer at University of Aveiro",
+          subTitle: "November 2017 - March 2018",
+          description: ``
         }
       ]
     }

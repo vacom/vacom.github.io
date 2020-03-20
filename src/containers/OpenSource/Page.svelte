@@ -4,11 +4,15 @@
   import AllProjects from "./data"
 
   let data = {
-    initialText: "I provide open",
-    colorText: "Design Solutions.",
-    text: "My work is presented here, check them below."
+    initialText: "I develop",
+    colorText: "Open Source projects.",
+    text: "Sharing is caring."
   };
 </script>
+
+<svelte:head>
+  <title>Vitor Amaral | Open Source</title>
+</svelte:head>
 
 <Layout>
   <Projects heading={data} data={AllProjects} detailed filters={false} />

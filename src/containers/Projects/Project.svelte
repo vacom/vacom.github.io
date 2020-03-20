@@ -113,6 +113,8 @@
   }
 </style>
 
+
+
 <div class="col-lg-4 col-6 mb-4 shuffle-item" transition:fade>
   <a class="overlay-content" href={url} use:link>
     <div class="position-relative inner-box">

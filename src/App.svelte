@@ -10,7 +10,6 @@
   let url = "";
 </script>
 
-
 <Router {url}>
   <Route path="themes" component={Themes} />
   <Route path="opensource" component={OpenSource} />
