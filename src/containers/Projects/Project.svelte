@@ -119,7 +119,7 @@
       <div class="image position-relative">
         <img
           src={image}
-          alt="portfolio-image"
+          alt="portfolio"
           class="img-fluid w-100 d-block" />
         <div class="overlay-box">
           <div class="overlay-inner">

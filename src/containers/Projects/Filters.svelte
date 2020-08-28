@@ -94,7 +94,7 @@
     <div class="btn-group btn-group-toggle " data-toggle="buttons">
 
       {#each filters as item, i (item.id)}
-        <label class="btn active" class:active={item.active}>
+        <label class="btn active" class:active={item.active} for="button">
           {item.title}
         </label>
       {/each}
